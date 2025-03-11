@@ -1,7 +1,8 @@
-import "./App.css";
+import './App.css';
+import { Hero } from './View/Hero/Hero';
 
 function App() {
-  return <div>E-commerce</div>;
+  return <Hero />;
 }
 
 export default App;
