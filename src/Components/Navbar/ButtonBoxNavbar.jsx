@@ -1,17 +1,18 @@
 import React from 'react';
+import { buttonBoxNavbar } from '../../Mock/buttonBoxNavbar';
 
 export const ButtonBoxNavbar = () => {
   return (
     <div
-      className="hidden w-full md:flex justify-center items-center md:w-auto "
+      className="items-center justify-center hidden w-1/3 md:flex "
       id="navbar-default"
     >
-      <ul className="font-medium flex flex-row   gap-2">
-        <li>
-          <a href="#" className="" aria-current="page">
-            Home
-          </a>
-        </li>
+      <ul className="flex flex-row gap-2 font-medium">
+        {buttonBoxNavbar.map((e) => (
+          <button className="text-lg text-white capitalize transition-all hover:border-b hover:border-white">
+            {e.name}
+          </button>
+        ))}
       </ul>
     </div>
   );
