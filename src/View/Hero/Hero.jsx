@@ -6,14 +6,10 @@ export const Hero = () => {
   return (
     <div
       id="hero"
-      className="flex flex-col items-center justify-center w-full min-h-screen gap-2 lg:flex-row"
+      className="flex flex-col-reverse items-center justify-end w-full min-h-screen gap-2 lg:justify-center lg:flex-row"
     >
-      <div className="flex items-center justify-center w-full lg:w-1/2">
-        <BoxHero />
-      </div>
-      <div className="flex items-center justify-center w-full lg:w-1/2">
-        <ImgHero />
-      </div>
+      <BoxHero />
+      <ImgHero />
     </div>
   );
 };
