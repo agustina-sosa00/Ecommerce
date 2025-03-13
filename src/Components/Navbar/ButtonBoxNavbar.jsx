@@ -1,5 +1,7 @@
 import React from 'react';
 import { buttonBoxNavbar } from '../../Mock/buttonBoxNavbar';
+import { Button } from '@mui/material';
+import './ButtonBoxNavbar.css';
 
 export const ButtonBoxNavbar = () => {
   return (
@@ -9,9 +11,9 @@ export const ButtonBoxNavbar = () => {
     >
       <ul className="flex flex-row gap-2 font-medium">
         {buttonBoxNavbar.map((e) => (
-          <button className="text-lg text-white capitalize transition-all hover:border-b hover:border-white">
+          <Button className="buttonNavbar" variant="text">
             {e.name}
-          </button>
+          </Button>
         ))}
       </ul>
     </div>

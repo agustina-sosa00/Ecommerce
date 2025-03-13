@@ -1,0 +1,10 @@
+.buttonNavbar {
+  color: white !important;
+  border: none;
+}
+
+.buttonNavbar:hover {
+  color: rgb(247, 247, 78) !important;
+  border: 1px solid rgb(247, 247, 78);
+  transition: all 0.3s ease-in-out;
+}

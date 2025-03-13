@@ -1,6 +1,7 @@
+import { TextField } from '@mui/material';
 import React from 'react';
 import { CiSearch } from 'react-icons/ci';
-
+import '../App.css';
 export const SearchBar = () => {
   return (
     <div className="flex items-center justify-center w-1/3 h-8 ">
