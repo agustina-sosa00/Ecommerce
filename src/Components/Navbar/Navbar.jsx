@@ -1,8 +1,8 @@
 import React from 'react';
 import { ButtonBoxNavbar } from './ButtonBoxNavbar';
 import { HamburgerMenu } from './HamburgerMenu';
-import { Logo } from './Logo';
 import { SearchBar } from '../SearchBar';
+import { Logo } from '../Logo';
 
 export const Navbar = () => {
   return (
