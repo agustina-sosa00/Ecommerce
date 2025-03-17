@@ -4,7 +4,7 @@ import { CiSearch } from 'react-icons/ci';
 import '../App.css';
 export const SearchBar = () => {
   return (
-    <div className="flex items-center justify-center w-1/3 h-8 ">
+    <div className="items-center justify-center hidden w-1/3 h-8 lg:flex ">
       <input
         placeholder="Search..."
         className="w-full h-8 px-5 py-1 text-white transition-all border-t border-b border-l border-white rounded-r-none shadow-lg outline-none border-r-none lg:w-1/2 input rounded-l-xl focus:w-64"

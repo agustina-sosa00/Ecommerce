@@ -6,7 +6,7 @@ export const Hero = () => {
   return (
     <div
       id="hero"
-      className="flex flex-col-reverse items-center justify-end w-full min-h-screen gap-2 lg:justify-center lg:flex-row"
+      className="flex flex-col-reverse items-center justify-end w-full gap-2 lg:min-h-screen lg:justify-center lg:flex-row"
     >
       <BoxHero />
       <ImgHero />

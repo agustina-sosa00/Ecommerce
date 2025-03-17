@@ -6,10 +6,10 @@ import './ButtonBoxNavbar.css';
 export const ButtonBoxNavbar = () => {
   return (
     <div
-      className="items-center justify-center hidden w-1/3 md:flex "
+      className="items-center justify-center hidden w-1/3 lg:flex "
       id="navbar-default"
     >
-      <ul className="flex flex-row gap-2 font-medium">
+      <ul className="flex flex-row gap-4 font-medium">
         {buttonBoxNavbar.map((e) => (
           <Button className="buttonNavbar" variant="text">
             {e.name}

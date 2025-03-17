@@ -1,6 +1,7 @@
 .buttonNavbar {
   color: white !important;
   border: none;
+  font-family: 'Karla', sans-serif !important;
 }
 
 .buttonNavbar:hover {
