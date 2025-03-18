@@ -1,7 +1,6 @@
 import React from 'react';
 import { buttonBoxNavbar } from '../../Mock/buttonBoxNavbar';
-import { Button } from '@mui/material';
-import './ButtonBoxNavbar.css';
+import { CustomButton } from '../CustomButton';
 
 export const ButtonBoxNavbar = () => {
   return (
@@ -11,9 +10,12 @@ export const ButtonBoxNavbar = () => {
     >
       <ul className="flex flex-row gap-4 font-medium">
         {buttonBoxNavbar.map((e) => (
-          <Button className="buttonNavbar" variant="text">
-            {e.name}
-          </Button>
+          <CustomButton
+            className="buttonNavbar"
+            variant="text"
+            text={e.name}
+            key={e.id}
+          />
         ))}
       </ul>
     </div>
