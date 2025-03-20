@@ -1,8 +1,13 @@
-import './App.css';
 import { Hero } from './View/Hero/Hero';
+import { Products } from './View/Products/Products';
 
 function App() {
-  return <Hero />;
+  return (
+    <>
+      <Hero />
+      {/* <Products /> */}
+    </>
+  );
 }
 
 export default App;

@@ -5,6 +5,7 @@
   --font-text: 'Karla', sans-serif;
   --color-yellowPrimary: #ffc803;
 }
+
 /* button hero */
 /* From Uiverse.io by doniaskima */
 .btn-12,
@@ -97,4 +98,46 @@
 .btn-12:hover:after,
 .btn-12:hover:before {
   --progress: 0;
+}
+
+/* CARD PRODUCT */
+.card {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+.card img {
+  width: 40% !important;
+}
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* CUSTOM BUTTON */
+.buttonNavbar {
+  color: white !important;
+  border: none;
+  font-family: 'Karla', sans-serif !important;
+}
+
+.buttonCard {
+  color: black !important;
+  border: none;
+  font-family: 'Karla', sans-serif !important;
+}
+
+.buttonCard:hover {
+  color: black;
+  border: 1px solid black;
+  transition: all 0.3s ease-in-out;
+  background-color: rgb(247, 247, 78);
+}
+
+.buttonNavbar:hover {
+  color: rgb(247, 247, 78) !important;
+  border: 1px solid rgb(247, 247, 78);
+  transition: all 0.3s ease-in-out;
 }
