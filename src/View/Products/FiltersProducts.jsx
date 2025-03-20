@@ -12,7 +12,7 @@ export const FiltersProducts = () => {
             //   onChange={handleChange}
             displayEmpty
             inputProps={{ 'aria-label': 'Without label' }}
-            className="selectCategories"
+            className="selectCat"
           >
             <MenuItem value="" className="menuCategories">
               <em>None</em>
