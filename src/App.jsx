@@ -1,13 +1,7 @@
-import { Hero } from './View/Hero/Hero';
-import { Products } from './View/Products/Products';
+import { AppRoutes } from './routes/AppRoutes';
 
 function App() {
-  return (
-    <>
-      <Hero />
-      {/* <Products /> */}
-    </>
-  );
+  return <AppRoutes />;
 }
 
 export default App;
