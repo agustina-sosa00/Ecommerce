@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 @import 'tailwindcss';
 
 @theme {
@@ -71,7 +72,7 @@
 
 .btn-12:after,
 .btn-12:before {
-  background: rgb(249, 229, 10);
+  background: #eebb04;
   content: '';
   inset: 0;
   position: absolute;
@@ -108,12 +109,14 @@
   align-items: center !important;
   padding-top: 5px !important;
   padding-bottom: 5px !important;
+  height: 230px !important;
 }
 .card img {
   width: 40% !important;
 }
 .card:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
 }
 
 /* CUSTOM BUTTON */
@@ -123,21 +126,43 @@
   font-family: 'Karla', sans-serif !important;
 }
 
-.buttonCard {
-  color: black !important;
+.buttonCardPrimary {
+  color: rgb(53, 53, 53) !important;
   border: none;
   font-family: 'Karla', sans-serif !important;
+  font-size: 13px !important;
+  border: 1px solid #ffc803 !important;
+  background-color: #ffc803 !important;
 }
 
-.buttonCard:hover {
-  color: black;
-  border: 1px solid black;
+.buttonCardPrimary:hover {
+  color: white !important;
+  /* border: 1px solid black; */
   transition: all 0.3s ease-in-out;
-  background-color: rgb(247, 247, 78);
+}
+.buttonCardSecondary {
+  color: rgb(53, 53, 53) !important;
+  border: none;
+  font-family: 'Karla', sans-serif !important;
+  font-size: 13px !important;
+  border: 1px solid #ffc803 !important;
+}
+
+.buttonCardSecondary:hover {
+  color: #ca9f02 !important;
+  /* border: 1px solid black; */
+  transition: all 0.3s ease-in-out;
 }
 
 .buttonNavbar:hover {
   color: rgb(247, 247, 78) !important;
   border: 1px solid rgb(247, 247, 78);
   transition: all 0.3s ease-in-out;
+}
+
+/* DIVIDER */
+.divider-box {
+  width: 100% !important;
+  height: 1px !important;
+  background-color: #ffc803 !important;
 }
