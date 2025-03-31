@@ -7,14 +7,17 @@ import { Footer } from './Components/Footer/Footer.jsx';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './Redux/Store/configureStore.js';
+import { CategpryProvider } from './Context/categoryContext.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <Provider store={store}>
-        <Navbar />
-        <App />
-        <Footer />
+        <CategpryProvider>
+          <Navbar />
+          <App />
+          <Footer />
+        </CategpryProvider>
       </Provider>
     </BrowserRouter>
   </StrictMode>

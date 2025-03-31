@@ -1,13 +1,13 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-export const categoriesApi = createApi({
-  reducerPath: 'apiCategories',
+export const productsApi = createApi({
+  reducerPath: 'apiProducts',
   baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_STORE_API }),
   endpoints: (builder) => ({
-    getCategories: builder.query({
-      query: () => 'categories',
+    getProducts: builder.query({
+      query: () => 'products/',
     }),
   }),
 });
 
-export const { useGetCategoriesQuery } = categoriesApi;
+export const { useGetProductsQuery } = productsApi;

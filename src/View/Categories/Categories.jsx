@@ -4,21 +4,45 @@ import { BoxCategoriesProd } from './BoxCategoriesProd';
 import { useGetCategoriesQuery } from '../../Redux/Services/categoriesService';
 import { useDispatch, useSelector } from 'react-redux';
 import { setCategories } from '../../Redux/Store/categoriesSlice';
+import { useGetProductsQuery } from '../../Redux/Services/productsServices';
+import { setProducts } from '../../Redux/Store/productsSlice';
+import { useCategory } from '../../Context/categoryContext';
 export const Categories = () => {
+  const { setSelectedCategory } = useCategory();
   const dispatch = useDispatch();
   const { data } = useGetCategoriesQuery();
+  const { data: productsData } = useGetProductsQuery();
   useEffect(() => {
-    if (data) {
+    if (data && productsData) {
       dispatch(setCategories(data));
+      dispatch(setProducts(productsData));
     }
-  });
+  }, [data?.length, productsData?.length]);
   const categories = useSelector((state) => state.categories.categories);
+  const products = useSelector((state) => state.products.products);
+  console.log(products);
+
+  const handleViewMore = (name) => {
+    setSelectedCategory(name);
+  };
   return (
     <div id="categories" className="categoriesContainer">
       <h1 className="title">Categories</h1>
-      <BoxCategoriesProd />
-      <BoxCategoriesProd />
-      <BoxCategoriesProd />
+
+      {categories?.map((c, i) => {
+        const filterProducts = products
+          .filter((e) => e.category.name === c.name)
+          .slice(0, 3);
+
+        return (
+          <BoxCategoriesProd
+            key={i}
+            titleCat={c.name}
+            products={filterProducts}
+            handle={() => handleViewMore(c.name)}
+          />
+        );
+      })}
     </div>
   );
 };

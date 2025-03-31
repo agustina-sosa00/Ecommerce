@@ -18,6 +18,13 @@
   justify-content: start;
   gap: 20px;
 }
+.emptyBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+}
 
 .title {
   font-family: 'Luckiest Guy', cursive;
