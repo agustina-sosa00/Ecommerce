@@ -1,6 +1,6 @@
 import React from 'react';
 import './Products.css';
-import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
+import { FormControl, MenuItem, Select } from '@mui/material';
 
 export const FiltersProducts = ({ selectCat, handleChange, categories }) => {
   return (
