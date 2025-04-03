@@ -12,7 +12,7 @@ export const BoxCategoriesProd = ({ titleCat, products, handle }) => {
           {products.map((p) => (
             <CardProducts
               key={p.id}
-              image={p.images[0]}
+              image={p.image}
               title={p.title}
               price={p.price}
               id={p.id}

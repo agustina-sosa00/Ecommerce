@@ -20,7 +20,6 @@ export const Categories = () => {
   }, [data?.length, productsData?.length]);
   const categories = useSelector((state) => state.categories.categories);
   const products = useSelector((state) => state.products.products);
-  console.log(products);
 
   const handleViewMore = (name) => {
     setSelectedCategory(name);
@@ -31,15 +30,15 @@ export const Categories = () => {
 
       {categories?.map((c, i) => {
         const filterProducts = products
-          .filter((e) => e.category.name === c.name)
+          .filter((e) => e.category === c)
           .slice(0, 3);
 
         return (
           <BoxCategoriesProd
             key={i}
-            titleCat={c.name}
+            titleCat={c}
             products={filterProducts}
-            handle={() => handleViewMore(c.name)}
+            handle={() => handleViewMore(c)}
           />
         );
       })}

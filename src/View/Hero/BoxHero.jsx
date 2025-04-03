@@ -9,7 +9,7 @@ export const BoxHero = () => {
         Descubre los mejores productos al mejor precio. Compra fácil, rápido y
         seguro. ¡Explora nuestra colección ahora!
       </p>
-      <Button textButton="products" />
+      <Button textButton="products" link={'/products'} />
     </div>
   );
 };

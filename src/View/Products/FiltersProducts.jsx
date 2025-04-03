@@ -15,8 +15,8 @@ export const FiltersProducts = ({ selectCat, handleChange, categories }) => {
             className="selectCat"
           >
             {categories.map((c, i) => (
-              <MenuItem key={i} value={c.name} className="menuCategories">
-                <em>{c.name}</em>
+              <MenuItem key={i} value={c} className="menuCategories">
+                <em>{c}</em>
               </MenuItem>
             ))}
           </Select>
