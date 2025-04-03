@@ -105,25 +105,6 @@
   --progress: 0;
 }
 
-/* CARD PRODUCT */
-.card {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  align-items: center !important;
-  padding-top: 5px !important;
-  padding-bottom: 5px !important;
-  height: 250px !important;
-}
-.imageCardProd {
-  width: 70% !important;
-  height: 60% !important;
-}
-.card:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  cursor: pointer;
-}
-
 /* CUSTOM BUTTON */
 .buttonNavbar {
   color: white !important;
@@ -165,11 +146,32 @@
   transition: all 0.3s ease-in-out;
 }
 
-/* DIVIDER */
-.divider-box {
+/* DIVIDE */
+.divideContain {
   width: 100% !important;
-  height: 1px !important;
+  display: flex;
+  justify-content: center;
+}
+
+.divideFull {
+  width: 80% !important;
+  height: 2px !important;
   background-color: #ffc803 !important;
+}
+.divide {
+  width: 100% !important;
+  height: 2px !important;
+  background-color: #ffc803 !important;
+}
+@media screen and (min-width: 500px) and (max-width: 900px) {
+  .buttonCardPrimary {
+    color: rgb(53, 53, 53) !important;
+    border: none;
+    font-family: 'Karla', sans-serif !important;
+    font-size: 18px !important;
+    border: 1px solid #ffc803 !important;
+    background-color: #ffc803 !important;
+  }
 }
 @media screen and (max-width: 500px) {
   .imageCardProd {

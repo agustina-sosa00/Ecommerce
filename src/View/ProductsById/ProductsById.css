@@ -7,7 +7,6 @@
 .detailsPod {
   width: 50%;
   height: 100%;
-  background-color: orange;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -15,7 +14,6 @@
 }
 
 .boxDetails {
-  background-color: wheat;
   width: 60%;
   height: 70%;
   display: flex;
@@ -23,6 +21,7 @@
   justify-content: start;
   align-items: end;
   padding: 5px 20px 5px 0px;
+  gap: 7px;
 }
 
 .titleProdId,
@@ -32,8 +31,15 @@
   font-family: var(--font-title);
 }
 
-.titleProdId span,
-.descriptionProdId span,
+.titleProdId {
+  text-align: end;
+}
+.titleProdId span {
+  font-size: 24px !important;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
 .priceProdId span,
 .categoryProdId span {
   font-weight: 600;
@@ -48,7 +54,6 @@
 .boxImageProd {
   width: 50%;
   height: 100%;
-  background-color: red;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -57,13 +62,91 @@
 .imageProd {
   width: 50%;
   height: 70%;
-  background-color: wheat;
+}
+
+.buttonBoxCenter {
+  width: 100% !important;
+  display: flex;
+  padding: 20px 0px;
+  justify-content: end;
 }
 
 @media screen and (min-width: 900px) and (max-width: 1280px) {
+  .buttonBoxCenter {
+    width: 100% !important;
+    display: flex;
+    padding: 20px 0px;
+    justify-content: end;
+  }
+  .boxDetails {
+    width: 70%;
+    align-items: end;
+    padding: 5px 0px 5px 20px;
+  }
+  .titleProdId {
+    text-align: end;
+  }
+  .titleProdId span {
+    font-size: 26px !important;
+    text-transform: capitalize;
+    font-weight: 600;
+  }
 }
 
 @media screen and (min-width: 500px) and (max-width: 900px) {
+  .container-productById {
+    height: auto;
+    flex-direction: column-reverse;
+  }
+  .detailsPod {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .boxImageProd {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    padding: 30px 0px 20px 0px;
+  }
+  .imageProd {
+    width: 30%;
+    height: 50%;
+  }
+  .boxDetails {
+    width: 70%;
+    height: auto;
+    justify-content: center;
+    align-items: start;
+  }
+  .descriptionProdId {
+    text-align: start;
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+
+  .titleProdId span,
+  .priceProdId span,
+  .categoryProdId span {
+    font-weight: 600;
+    font-size: 23px;
+    text-transform: capitalize;
+  }
+
+  .titleProdId,
+  .priceProdId,
+  .categoryProdId {
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+
+  .titleProdId span {
+    font-size: 25px !important;
+    text-transform: capitalize;
+    font-weight: 600;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -87,15 +170,37 @@
   .imageProd {
     width: 50%;
     height: 70%;
-    background-color: wheat;
   }
   .boxDetails {
-    width: 80%;
+    width: 90%;
     height: auto;
     justify-content: center;
     align-items: start;
   }
   .descriptionProdId {
     text-align: start;
+    font-size: 18px;
+    text-transform: capitalize;
+  }
+
+  .titleProdId span,
+  .priceProdId span,
+  .categoryProdId span {
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+
+  .titleProdId,
+  .priceProdId,
+  .categoryProdId {
+    font-size: 18px;
+    text-transform: capitalize;
+  }
+
+  .titleProdId span {
+    font-size: 22px !important;
+    text-transform: capitalize;
+    font-weight: 600;
   }
 }
