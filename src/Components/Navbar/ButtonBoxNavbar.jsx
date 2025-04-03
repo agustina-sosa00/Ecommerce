@@ -24,10 +24,10 @@ export const ButtonBoxNavbar = () => {
 
   return (
     <div
-      className="items-center justify-center hidden w-1/3 lg:flex"
+      className="items-center justify-center hidden w-1/3 h-20 lg:flex"
       id="navbar-default"
     >
-      <ul className="flex flex-row gap-4 font-medium">
+      <ul className="flex flex-row items-center justify-center w-full h-20 gap-5 font-medium">
         {buttonBoxNavbar.map((e) =>
           e.type === 'scroll' ? (
             <ScrollLink

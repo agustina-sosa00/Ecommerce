@@ -7,6 +7,10 @@
   --color-yellowPrimary: #ffc803;
 }
 
+:root {
+  --font-title: 'Karla', sans-serif;
+}
+
 /* button hero */
 /* From Uiverse.io by doniaskima */
 .btn-12,
@@ -111,8 +115,9 @@
   padding-bottom: 5px !important;
   height: 250px !important;
 }
-.card img {
-  width: 40% !important;
+.imageCardProd {
+  width: 70% !important;
+  height: 60% !important;
 }
 .card:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -165,4 +170,8 @@
   width: 100% !important;
   height: 1px !important;
   background-color: #ffc803 !important;
+}
+@media screen and (max-width: 500px) {
+  .imageCardProd {
+  }
 }
