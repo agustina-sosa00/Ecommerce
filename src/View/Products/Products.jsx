@@ -7,12 +7,13 @@ import { useSelector } from 'react-redux';
 
 export const Products = () => {
   const { selectedCategory, setSelectedCategory } = useCategory();
-  console.log(selectedCategory);
   const categories = useSelector((state) => state.categories.categories);
+
   const handleSelectCat = (cat) => {
     setSelectedCategory(cat);
   };
   const products = useSelector((state) => state.products.products);
+
   return (
     <div id="products" className="products-container">
       <div className="boxHead">
@@ -26,11 +27,11 @@ export const Products = () => {
 
       <div className="flex flex-wrap items-center justify-center w-full gap-5">
         {products
-          .filter((e) => e.category.name === selectedCategory)
+          .filter((e) => e.category === selectedCategory)
           .map((p, i) => (
             <CardProducts
               key={i}
-              image={p.images[0]}
+              image={p.image}
               title={p.title}
               price={p.price}
               id={p.id}

@@ -5,7 +5,7 @@ export const productsApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_STORE_API }),
   endpoints: (builder) => ({
     getProducts: builder.query({
-      query: () => 'products/',
+      query: () => 'products',
     }),
   }),
 });
