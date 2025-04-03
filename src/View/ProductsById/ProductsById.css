@@ -147,6 +147,16 @@
     text-transform: capitalize;
     font-weight: 600;
   }
+  .titleProdId {
+    text-align: start !important;
+  }
+
+  .buttonBoxCenter {
+    width: 100% !important;
+    display: flex;
+    padding: 20px 0px;
+    justify-content: start;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -197,10 +207,20 @@
     font-size: 18px;
     text-transform: capitalize;
   }
-
   .titleProdId span {
     font-size: 22px !important;
     text-transform: capitalize;
     font-weight: 600;
+    text-align: start !important;
+  }
+  .titleProdId {
+    text-align: start !important;
+  }
+
+  .buttonBoxCenter {
+    width: 100% !important;
+    display: flex;
+    padding: 20px 0px;
+    justify-content: start;
   }
 }
