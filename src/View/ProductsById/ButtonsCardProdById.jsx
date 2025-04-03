@@ -1,9 +1,9 @@
 import React from 'react';
 import { CustomButton } from '../../Components/CustomButton';
 
-export const ButtonsCardProdById = ({ handle }) => {
+export const ButtonsCardProdById = ({ handle, classBox }) => {
   return (
-    <div>
+    <div className={`${classBox ? 'buttonBoxCenter' : ''}`}>
       <CustomButton
         text="Add to cart"
         classButton={true}
