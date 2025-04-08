@@ -9,18 +9,21 @@ import { Provider } from 'react-redux';
 import { store } from './Redux/Store/configureStore.js';
 import { CategpryProvider } from './Context/categoryContext.jsx';
 import { ProductsProvider } from './Context/productsContext.jsx';
+import { CartProvider } from './Context/cartContext.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <Provider store={store}>
-        <CategpryProvider>
-          <ProductsProvider>
-            <Navbar />
-            <App />
-            <Footer />
-          </ProductsProvider>
-        </CategpryProvider>
+        <CartProvider>
+          <CategpryProvider>
+            <ProductsProvider>
+              <Navbar />
+              <App />
+              <Footer />
+            </ProductsProvider>
+          </CategpryProvider>
+        </CartProvider>
       </Provider>
     </BrowserRouter>
   </StrictMode>
