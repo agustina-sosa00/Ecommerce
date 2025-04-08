@@ -5,7 +5,7 @@ import { ButtonFooter } from './ButtonFooter';
 export const Footer = () => {
   return (
     <footer className="w-full bg-black shadow-sm md:py-8 ">
-      <div class="w-full max-w-screen-xl mx-auto p-4 ">
+      <div className="w-full max-w-screen-xl p-4 mx-auto ">
         <div className="sm:flex sm:items-center sm:justify-between">
           <Logo />
           <ButtonFooter />

@@ -1,0 +1,13 @@
+.cartContain {
+  width: 300px !important;
+  height: 100%;
+  padding: 10px 0px;
+}
+
+.headerCart {
+  width: 100% !important;
+  height: 30px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
