@@ -3,6 +3,7 @@ import { ButtonBoxNavbar } from './ButtonBoxNavbar';
 import { HamburgerMenu } from './HamburgerMenu';
 import { SearchBar } from '../SearchBar';
 import { Logo } from '../Logo';
+import { Cart } from '../Cart/Cart';
 
 export const Navbar = () => {
   return (
@@ -10,6 +11,7 @@ export const Navbar = () => {
       <ButtonBoxNavbar />
       <Logo />
       <SearchBar />
+      <Cart />
       <HamburgerMenu />
     </nav>
   );
