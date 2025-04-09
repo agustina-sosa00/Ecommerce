@@ -4,6 +4,7 @@ import { HamburgerMenu } from './HamburgerMenu';
 import { SearchBar } from '../SearchBar';
 import { Logo } from '../Logo';
 import { Cart } from '../Cart/Cart';
+import './Navbar.css';
 
 export const Navbar = () => {
   return (
@@ -11,8 +12,10 @@ export const Navbar = () => {
       <ButtonBoxNavbar />
       <Logo />
       <SearchBar />
-      <Cart />
-      <HamburgerMenu />
+      <div className="containCartandHamb">
+        <Cart />
+        <HamburgerMenu />
+      </div>
     </nav>
   );
 };
