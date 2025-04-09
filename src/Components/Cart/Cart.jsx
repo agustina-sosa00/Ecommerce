@@ -17,8 +17,8 @@ export const Cart = () => {
       handle={handleOnClick}
       icon={<PiShoppingCartFill />}
     >
-      <div className="cartContain">
-        <div className="headerCart">
+      <div className="cartContain ">
+        <div className="headerCart ">
           <h1>Mi Carrito</h1>
           <button onClick={handleOnClick}>
             <IoMdClose />

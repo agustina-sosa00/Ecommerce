@@ -36,10 +36,10 @@ export const HamburgerMenu = () => {
       <button
         data-collapse-toggle="navbar-default"
         type="button"
-        className="flex items-center justify-center w-10 h-10 p-2 rounded-lg lg:hidden"
+        className="flex items-center justify-center w-10 h-10 rounded-lg lg:hidden"
         onClick={handleOnClick}
       >
-        <GiHamburgerMenu className="text-5xl text-white" />
+        <GiHamburgerMenu className="!text-3xl text-white" />
       </button>
       {open && (
         <div className="absolute right-0 z-10 flex flex-col items-end w-2/3 px-5 py-5 top-20 bg-black/70 lg:hidden">
