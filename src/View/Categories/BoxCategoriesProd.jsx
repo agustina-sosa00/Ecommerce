@@ -2,7 +2,12 @@ import React from 'react';
 import { CardProducts } from '../Products/CardProducts';
 import { CardSeeMore } from './CardSeeMore';
 
-export const BoxCategoriesProd = ({ titleCat, products, handle }) => {
+export const BoxCategoriesProd = ({
+  titleCat,
+  products,
+  handle,
+  handleAdd,
+}) => {
   return (
     <div className="box-categories">
       <h1 className="title-categories">{titleCat}</h1>
@@ -16,6 +21,7 @@ export const BoxCategoriesProd = ({ titleCat, products, handle }) => {
               title={p.title}
               price={p.price}
               id={p.id}
+              handle={handleAdd}
             />
           ))}
 

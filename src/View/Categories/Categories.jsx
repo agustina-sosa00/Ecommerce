@@ -8,7 +8,10 @@ import { useGetProductsQuery } from '../../Redux/Services/productsServices';
 import { setProducts } from '../../Redux/Store/productsSlice';
 import { useCategory } from '../../Context/categoryContext';
 import { useProductsContext } from '../../Context/productsContext';
+import { useCart } from '../../Context/cartContext';
+import { productsInCart } from '../../Utils/productsInCart';
 export const Categories = () => {
+  const { cart, setCart } = useCart();
   const { setSelectedCategory } = useCategory();
   const { setProductsContext } = useProductsContext();
   const dispatch = useDispatch();
@@ -27,6 +30,15 @@ export const Categories = () => {
     setSelectedCategory(name);
     setProductsContext(products);
   };
+
+  const handleAddToCart = (product) => {
+    const prodInCart = productsInCart(cart, product?.id);
+    if (prodInCart) {
+      return;
+    } else {
+      setCart([...cart, product]);
+    }
+  };
   return (
     <div id="categories" className="categoriesContainer">
       <h1 className="title">Categories</h1>
@@ -42,6 +54,7 @@ export const Categories = () => {
             titleCat={c}
             products={filterProducts}
             handle={() => handleViewMore(c)}
+            handleAdd={handleAddToCart}
           />
         );
       })}

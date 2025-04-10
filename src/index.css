@@ -163,6 +163,15 @@
   height: 2px !important;
   background-color: #ffc803 !important;
 }
+
+.buttonDrawer {
+  color: white !important;
+  height: 40px !important;
+  font-size: 30px !important;
+}
+
+/* M E D I A  Q U E R Y */
+
 @media screen and (min-width: 500px) and (max-width: 900px) {
   .buttonCardPrimary {
     color: rgb(53, 53, 53) !important;
@@ -174,6 +183,9 @@
   }
 }
 @media screen and (max-width: 500px) {
-  .imageCardProd {
+  .buttonDrawer {
+    color: white !important;
+    height: 40px !important;
+    font-size: 33px !important;
   }
 }
