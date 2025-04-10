@@ -4,8 +4,11 @@ import './Products.css';
 import { FiltersProducts } from './FiltersProducts';
 import { useCategory } from '../../Context/categoryContext';
 import { useSelector } from 'react-redux';
+import { useCart } from '../../Context/cartContext';
+import { productsInCart } from '../../Utils/productsInCart';
 
 export const Products = () => {
+  const { cart, setCart } = useCart();
   const { selectedCategory, setSelectedCategory } = useCategory();
   const categories = useSelector((state) => state.categories.categories);
 
@@ -13,7 +16,14 @@ export const Products = () => {
     setSelectedCategory(cat);
   };
   const products = useSelector((state) => state.products.products);
-
+  const handleAddToCart = (prod) => {
+    const prodInCart = productsInCart(cart, prod?.id);
+    if (prodInCart) {
+      return;
+    } else {
+      setCart([...cart, prod]);
+    }
+  };
   return (
     <div id="products" className="products-container">
       <div className="boxHead">
@@ -35,6 +45,7 @@ export const Products = () => {
               title={p.title}
               price={p.price}
               id={p.id}
+              handle={handleAddToCart}
             />
           ))}
       </div>

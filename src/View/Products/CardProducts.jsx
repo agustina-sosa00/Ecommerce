@@ -5,8 +5,9 @@ import './Products.css';
 import { CustomButton } from '../../Components/CustomButton';
 import { formatPrice } from '../../Utils/formatPrice';
 import { Link } from 'react-router-dom';
+import { cutTitle } from '../../Utils/cutTitle';
 
-export const CardProducts = ({ image, title, price, textButton, id }) => {
+export const CardProducts = ({ image, title, price, id, handle }) => {
   return (
     <>
       {/* xs: celular sm: tablet md: escritorio */}
@@ -16,11 +17,16 @@ export const CardProducts = ({ image, title, price, textButton, id }) => {
           <img src={image} alt="logo" className="imageCardProd" />
         </Link>
         <h3 className="px-3 text-sm font-bold text-center md:text-lg font-text ">
-          {title.slice(0, 15)}
+          {cutTitle(title, 15)}
         </h3>
         <p className="text-xs md:text-sm lg:text-base">{formatPrice(price)}</p>
         <div className="flex flex-col items-center justify-center w-full gap-1 p-2">
-          <CustomButton text="Add to cart" classButton={true} color="primary" />
+          <CustomButton
+            text="Add to cart"
+            classButton={true}
+            color="primary"
+            onClickButton={() => handle({ id, title, image, price })}
+          />
         </div>
       </Card>
     </>
