@@ -4,7 +4,13 @@ import { formatPrice } from '../../Utils/formatPrice';
 import { ButtonsCardProdById } from './ButtonsCardProdById';
 import { Divide } from '../../Components/Divide';
 
-export const DetailsProd = ({ titleProd, description, price, category }) => {
+export const DetailsProd = ({
+  titleProd,
+  description,
+  price,
+  category,
+  handleButton,
+}) => {
   return (
     <div className="detailsPod">
       <div className="boxDetails">
@@ -18,7 +24,7 @@ export const DetailsProd = ({ titleProd, description, price, category }) => {
         <p className="categoryProdId">
           <span>category:</span> {category}
         </p>
-        <ButtonsCardProdById classBox={true} />
+        <ButtonsCardProdById handle={handleButton} classBox={true} />
         <Divide classWidth={true} />
         <p className="descriptionProdId">
           <span>description:</span> {description}

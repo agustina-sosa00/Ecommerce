@@ -8,7 +8,7 @@ import './Navbar.css';
 
 export const Navbar = () => {
   return (
-    <nav className="sticky top-0 z-30 flex items-center justify-between w-full h-20 gap-4 p-4 bg-black lg:justify-evenly">
+    <nav className="navbarContain">
       <ButtonBoxNavbar />
       <Logo />
       <SearchBar />
