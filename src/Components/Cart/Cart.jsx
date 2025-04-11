@@ -28,12 +28,12 @@ export const Cart = () => {
     >
       <div className="cartContain ">
         <div className="headerCart ">
-          <h1>Mi Carrito</h1>
+          <h1 className="titleHeaderCart">Mi Carrito</h1>
           <button onClick={handleOnClick}>
             <IoMdClose />
           </button>
         </div>
-        <Divide classWidth="divideFull" />{' '}
+        <Divide classWidth="divideFull" />
         <ListProductsCart products={cart} handleDelete={handleDeleteProd} />
       </div>
     </DrawerRight>
