@@ -15,6 +15,11 @@
   display: flex;
   /* gap: 5px; */
 }
+@media screen and (min-width: 500px) and (max-width: 900px) {
+  .navbarContain {
+    justify-content: space-between;
+  }
+}
 
 @media screen and (max-width: 500px) {
   .navbarContain {

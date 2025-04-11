@@ -15,6 +15,16 @@
   justify-content: space-between;
 }
 
+.titleHeaderCart {
+  font-family: var(--font-title);
+  color: black;
+}
+
+.titleProdCart {
+  font-family: var(--font-title);
+  font-size: 15px;
+}
+
 .listProducts {
   width: 300px !important;
   gap: 10px !important;
@@ -46,6 +56,10 @@
   align-items: start;
   padding: 0px 5px;
 }
+.priceProdCart {
+  font-family: var(--font-title);
+  font-weight: 500;
+}
 
 .deleteProdCart {
   width: 20% !important;
@@ -53,4 +67,51 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.iconDeleteCart:hover {
+  cursor: pointer;
+}
+
+.iconDeleteCart {
+  font-size: 22px;
+  color: rgb(211, 0, 0);
+}
+
+.dividerMaterial {
+  width: 100% !important;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1280px) {
+}
+
+@media screen and (min-width: 500px) and (max-width: 900px) {
+  .cartContain {
+    width: 400px !important;
+  }
+  .listProducts {
+    width: 400px !important;
+  }
+  .imgCartProd {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .titleHeaderCart {
+    font-size: 25px;
+  }
+  .titleProdCart {
+    font-size: 19px;
+  }
+  .priceProdCart {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .titleHeaderCart {
+    font-size: 20px;
+  }
+  .titleProdCart {
+    font-size: 15px;
+  }
 }
