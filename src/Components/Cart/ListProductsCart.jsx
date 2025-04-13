@@ -29,7 +29,7 @@ export const ListProductsCart = ({ products, handleDelete }) => {
         ))
       ) : (
         <div className="flex items-center justify-center w-full h-screen text-gray-600 font-text">
-          Aún no hay productos en el carrito
+          Aún no hay productos en el carrito. Ver más...
         </div>
       )}
     </div>
