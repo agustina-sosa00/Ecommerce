@@ -10,6 +10,8 @@ import { ListProductsCart } from './ListProductsCart.jsx';
 
 export const Cart = () => {
   const [open, setOpen] = useState(false);
+  const { total } = useCart();
+  console.log('total', total);
   const handleOnClick = () => {
     setOpen(!open);
   };
@@ -35,6 +37,7 @@ export const Cart = () => {
         </div>
         <Divide classWidth="divideFull" />
         <ListProductsCart products={cart} handleDelete={handleDeleteProd} />
+        <p>total:{total}</p>
       </div>
     </DrawerRight>
   );
