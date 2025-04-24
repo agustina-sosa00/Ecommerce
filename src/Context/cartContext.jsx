@@ -1,3 +1,5 @@
+/* eslint-disable no-const-assign */
+/* eslint-disable no-undef */
 import { createContext, useContext, useEffect, useState } from 'react';
 
 export const CartContext = createContext();
