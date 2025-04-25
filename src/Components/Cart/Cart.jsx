@@ -15,12 +15,12 @@ export const Cart = () => {
   const handleOnClick = () => {
     setOpen(!open);
   };
-  const { cart, setCart } = useCart();
+  // const { cart, setCart } = useCart();
 
-  const handleDeleteProd = (id) => {
-    const productDelete = cart.filter((p) => p.id !== id);
-    setCart(productDelete);
-  };
+  // const handleDeleteProd = (id) => {
+  //   const productDelete = cart.filter((p) => p.id !== id);
+  //   setCart(productDelete);
+  // };
 
   return (
     <DrawerRight
@@ -28,7 +28,7 @@ export const Cart = () => {
       handle={handleOnClick}
       icon={<PiShoppingCartFill />}
     >
-      <div className="cartContain ">
+      {/* <div className="cartContain ">
         <div className="headerCart ">
           <h1 className="titleHeaderCart">Mi Carrito</h1>
           <button onClick={handleOnClick}>
@@ -38,7 +38,8 @@ export const Cart = () => {
         <Divide classWidth="divideFull" />
         <ListProductsCart products={cart} handleDelete={handleDeleteProd} />
         <p>total:{total}</p>
-      </div>
+      </div> */}
+      <p>Este es el modal del carrito </p>
     </DrawerRight>
   );
 };
