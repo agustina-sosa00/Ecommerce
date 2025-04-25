@@ -7,6 +7,8 @@ import './Cart.css';
 import { Divide } from '../Divide.jsx';
 import { useCart } from '../../Context/cartContext.jsx';
 import { ListProductsCart } from './ListProductsCart.jsx';
+import { CustomButton } from '../CustomButton.jsx';
+import { formatPrice } from '../../Utils/formatPrice.js';
 
 export const Cart = () => {
   const [open, setOpen] = useState(false);
@@ -15,12 +17,12 @@ export const Cart = () => {
   const handleOnClick = () => {
     setOpen(!open);
   };
-  // const { cart, setCart } = useCart();
+  const { cart, setCart } = useCart();
 
-  // const handleDeleteProd = (id) => {
-  //   const productDelete = cart.filter((p) => p.id !== id);
-  //   setCart(productDelete);
-  // };
+  const handleDeleteProd = (id) => {
+    const productDelete = cart.filter((p) => p.id !== id);
+    setCart(productDelete);
+  };
 
   return (
     <DrawerRight
@@ -28,7 +30,7 @@ export const Cart = () => {
       handle={handleOnClick}
       icon={<PiShoppingCartFill />}
     >
-      {/* <div className="cartContain ">
+      <div className="cartContain ">
         <div className="headerCart ">
           <h1 className="titleHeaderCart">Mi Carrito</h1>
           <button onClick={handleOnClick}>
@@ -37,9 +39,21 @@ export const Cart = () => {
         </div>
         <Divide classWidth="divideFull" />
         <ListProductsCart products={cart} handleDelete={handleDeleteProd} />
-        <p>total:{total}</p>
-      </div> */}
-      <p>Este es el modal del carrito </p>
+        <div className="constain-infoCart">
+          <p className="totalPrice-text">
+            <span>total: </span>
+            {formatPrice(total)}
+          </p>
+
+          <CustomButton
+            classButton={true}
+            color="primary"
+            text={'Ver compra'}
+            link={'/cart'}
+            onClickButton={handleOnClick}
+          />
+        </div>
+      </div>
     </DrawerRight>
   );
 };
