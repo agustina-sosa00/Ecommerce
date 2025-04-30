@@ -11,6 +11,10 @@
   --font-title: 'Karla', sans-serif;
 }
 
+body {
+  user-select: none;
+}
+
 /* button hero */
 /* From Uiverse.io by doniaskima */
 .btn-12,

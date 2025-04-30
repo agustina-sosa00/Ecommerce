@@ -13,6 +13,7 @@ import { Count } from './Count';
 
 export const TableCart = () => {
   const { cart } = useCart();
+  console.log('cartttttt', cart);
   const headerTitles = ['Products', 'Quantity', 'Price', 'Total Price'];
   return (
     <TableContainer component={Paper} className="container-tableCart">
@@ -36,7 +37,7 @@ export const TableCart = () => {
                 {cutTitle(prod.title, 20)}
               </TableCell>
               <TableCell align="left" className="prod-Cart">
-                <Count />
+                <Count product={prod} />
               </TableCell>
               <TableCell align="left" className="prod-Cart">
                 {prod.price}

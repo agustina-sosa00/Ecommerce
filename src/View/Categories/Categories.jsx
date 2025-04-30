@@ -32,11 +32,12 @@ export const Categories = () => {
   };
 
   const handleAddToCart = (product) => {
-    const prodInCart = productsInCart(cart, product?.id);
+    const newProd = { ...product, quantity: 1 };
+    const prodInCart = productsInCart(cart, newProd?.id);
     if (prodInCart) {
       return;
     } else {
-      setCart([...cart, product]);
+      setCart([...cart, newProd]);
     }
   };
   return (
