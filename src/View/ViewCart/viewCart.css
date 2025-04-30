@@ -24,8 +24,30 @@
   border: 1px solid rgb(207, 207, 207);
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 2px;
   gap: 1px;
+}
+
+.buttonCounter {
+  width: 25%;
+  height: 100%;
+  /* background-color: red; */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.icon-counter {
+  width: 100%;
+}
+
+.count-div {
+  width: 47%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: context-menu;
 }
 
 .container-tableCart {
