@@ -14,6 +14,8 @@
 .titleTable-cart {
   font-family: var(--font-text) !important;
   font-weight: 600 !important;
+  display: flex;
+  justify-content: center;
 }
 .prod-Cart {
   font-family: var(--font-text) !important;
