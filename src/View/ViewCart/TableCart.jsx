@@ -10,6 +10,7 @@ import { useCart } from '../../Context/cartContext';
 import './viewCart.css';
 import { cutTitle } from '../../Utils/cutTitle';
 import { Count } from './Count';
+import { formatPrice } from '../../Utils/formatPrice';
 
 export const TableCart = () => {
   const { cart } = useCart();
@@ -40,10 +41,10 @@ export const TableCart = () => {
                 <Count product={prod} />
               </TableCell>
               <TableCell align="left" className="prod-Cart">
-                {prod.price}
+                {formatPrice(prod.price)}
               </TableCell>
               <TableCell align="left" className="prod-Cart">
-                {prod.price}
+                {formatPrice(prod.price)}
               </TableCell>
             </TableRow>
           ))}
