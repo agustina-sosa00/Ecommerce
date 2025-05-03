@@ -13,7 +13,6 @@ import { formatPrice } from '../../Utils/formatPrice.js';
 export const Cart = () => {
   const [open, setOpen] = useState(false);
   const { total } = useCart();
-  console.log('total', total);
   const handleOnClick = () => {
     setOpen(!open);
   };

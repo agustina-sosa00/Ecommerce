@@ -16,7 +16,10 @@ export const CartProvider = ({ children }) => {
   });
 
   const calculateTotal = (cart) => {
-    const totalPrice = cart?.reduce((acc, prod) => acc + prod.price, 0);
+    const totalPrice = cart?.reduce(
+      (acc, prod) => acc + prod.price * prod.quantity,
+      0
+    );
     setTotal(totalPrice);
   };
 
