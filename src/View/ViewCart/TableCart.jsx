@@ -11,11 +11,13 @@ import './viewCart.css';
 import { cutTitle } from '../../Utils/cutTitle';
 import { Count } from './Count';
 import { formatPrice } from '../../Utils/formatPrice';
+import { Divider, TableFooter } from '@mui/material';
 
 export const TableCart = () => {
   const { cart } = useCart();
+  const { total } = useCart();
   console.log('cartttttt', cart);
-  const headerTitles = ['Products', 'Quantity', 'Price', 'Total Price'];
+  const headerTitles = ['Products', 'Quantity', 'Unit Price', 'Total Price'];
   return (
     <TableContainer component={Paper} className="container-tableCart">
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -49,6 +51,15 @@ export const TableCart = () => {
             </TableRow>
           ))}
         </TableBody>
+
+        <TableFooter className="tableFooter-Cart">
+          <TableRow>
+            <TableCell colSpan={3}></TableCell>
+            <TableCell colSpan={1} className="titleTableFooter-cart">
+              Total {formatPrice(total)}
+            </TableCell>
+          </TableRow>
+        </TableFooter>
       </Table>
     </TableContainer>
   );
