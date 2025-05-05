@@ -4,6 +4,7 @@ import { Products } from '../View/Products/Products';
 import { Home } from '../View/Home/Home';
 import { ProductsById } from '../View/ProductsById/ProductsById';
 import { ScrollToTop } from '../Components/ScrollToTop';
+import { ViewCart } from '../View/ViewCart/ViewCart';
 
 export const AppRoutes = () => {
   return (
@@ -13,7 +14,7 @@ export const AppRoutes = () => {
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/products/:id" element={<ProductsById />} />
-        <Route path="/cart" element={<h1>Cart</h1>} />
+        <Route path="/cart" element={<ViewCart />} />
       </Routes>
     </>
   );

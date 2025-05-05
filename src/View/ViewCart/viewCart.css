@@ -1,0 +1,81 @@
+.contain-viewCart {
+  width: 100% !important;
+  height: 100vh;
+  padding: 30px 50px;
+}
+
+.titleCart {
+  font-family: 'Luckiest Guy', cursive;
+  color: #eebb04;
+  font-size: 50px;
+  text-align: center;
+}
+
+.titleTable-cart {
+  font-family: var(--font-text) !important;
+  font-weight: 600 !important;
+}
+
+.tableFooter-Cart {
+  border-top: 1px solid rgb(214, 214, 214);
+}
+
+.titleTableFooter-cart {
+  font-family: var(--font-text) !important;
+  font-weight: 800 !important;
+  font-size: 14px !important;
+  color: black;
+}
+.prod-Cart {
+  font-family: var(--font-text) !important;
+}
+
+.container-counter {
+  width: 100px;
+  border: 1px solid rgb(207, 207, 207);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  gap: 1px;
+}
+
+.buttonCounter {
+  width: 25%;
+  height: 100%;
+  /* background-color: red; */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.icon-counter {
+  width: 100%;
+}
+
+.count-div {
+  width: 47%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: context-menu;
+}
+
+.tableCart-header {
+  background-color: rgb(235, 235, 235);
+}
+
+@media screen and (min-width: 900px) and (max-width: 1280px) {
+}
+
+@media screen and (min-width: 500px) and (max-width: 900px) {
+}
+
+@media screen and (max-width: 500px) {
+  .titleCart {
+    font-size: 35px;
+  }
+  .container-tableCart {
+    display: none;
+  }
+}
