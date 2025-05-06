@@ -14,15 +14,18 @@ export const FiltersProducts = ({ selectCat, handleChange, categories }) => {
             inputProps={{ 'aria-label': 'Without label' }}
             className="selectCat"
           >
+            <MenuItem value="">
+              <em>Todos</em>
+            </MenuItem>
             {categories.map((c, i) => (
               <MenuItem key={i} value={c} className="menuCategories">
-                <em>{c}</em>
+                <em className="capitalize">{c}</em>
               </MenuItem>
             ))}
           </Select>
         </FormControl>
       </div>
-      <div className="boxFilters"></div>
+      {/* <div className="boxFilters"></div> */}
     </div>
   );
 };
