@@ -23,6 +23,7 @@ export const ProductsById = () => {
   console.log('cart', cart);
   return (
     <div className="container-productById">
+      <ImageProd image={product?.image} />
       <DetailsProd
         handleButton={handleAddToCart}
         titleProd={product?.title}
@@ -30,7 +31,6 @@ export const ProductsById = () => {
         price={product?.price}
         category={product?.category}
       />
-      <ImageProd image={product?.image} />
     </div>
   );
 };

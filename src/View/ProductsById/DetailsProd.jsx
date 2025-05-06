@@ -27,7 +27,7 @@ export const DetailsProd = ({
         <ButtonsCardProdById handle={handleButton} classBox={true} />
         <Divide classWidth={true} />
         <p className="descriptionProdId">
-          <span>description:</span> {description}
+          <span>Description:</span> {description}
         </p>
       </div>
     </div>
