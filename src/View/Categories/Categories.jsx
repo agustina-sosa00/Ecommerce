@@ -4,31 +4,24 @@ import { BoxCategoriesProd } from './BoxCategoriesProd';
 import { useGetCategoriesQuery } from '../../Redux/Services/categoriesService';
 import { useDispatch, useSelector } from 'react-redux';
 import { setCategories } from '../../Redux/Store/categoriesSlice';
-import { useGetProductsQuery } from '../../Redux/Services/productsServices';
-import { setProducts } from '../../Redux/Store/productsSlice';
 import { useCategory } from '../../Context/categoryContext';
-import { useProductsContext } from '../../Context/productsContext';
 import { useCart } from '../../Context/cartContext';
 import { productsInCart } from '../../Utils/productsInCart';
-export const Categories = () => {
+
+export const Categories = ({ products }) => {
   const { cart, setCart } = useCart();
   const { setSelectedCategory } = useCategory();
-  const { setProductsContext } = useProductsContext();
   const dispatch = useDispatch();
   const { data } = useGetCategoriesQuery();
-  const { data: productsData } = useGetProductsQuery();
   const categories = useSelector((state) => state.categories.categories);
-  const products = useSelector((state) => state.products.products);
   useEffect(() => {
-    if (data && productsData) {
+    if (data) {
       dispatch(setCategories(data));
-      dispatch(setProducts(productsData));
     }
-  }, [data?.length, productsData?.length]);
+  }, [data]);
 
   const handleViewMore = (name) => {
     setSelectedCategory(name);
-    setProductsContext(products);
   };
 
   const handleAddToCart = (product) => {
@@ -46,7 +39,7 @@ export const Categories = () => {
 
       {categories?.map((c, i) => {
         const filterProducts = products
-          .filter((e) => e.category === c)
+          ?.filter((e) => e.category === c)
           .slice(0, 3);
 
         return (

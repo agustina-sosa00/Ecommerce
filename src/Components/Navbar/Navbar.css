@@ -15,6 +15,13 @@
   display: flex;
   /* gap: 5px; */
 }
+.contain-searchBar-lg {
+  display: flex;
+  width: 33%;
+}
+.subNavbar {
+  display: none;
+}
 @media screen and (min-width: 500px) and (max-width: 900px) {
   .navbarContain {
     justify-content: space-between;
@@ -24,5 +31,21 @@
 @media screen and (max-width: 500px) {
   .navbarContain {
     justify-content: space-between;
+    height: 60px;
+  }
+
+  .subNavbar {
+    width: 100% !important;
+    height: 50px;
+    background-color: var(--color-yellowPrimary);
+    top: 60px;
+    position: sticky;
+    z-index: 30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contain-searchBar-lg {
+    display: none;
   }
 }

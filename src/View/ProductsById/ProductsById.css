@@ -2,15 +2,16 @@
   width: 100% !important;
   height: 100vh;
   display: flex;
+  margin-bottom: 20px;
 }
 
 .detailsPod {
   width: 50%;
   height: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: start;
   align-items: center;
-  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .boxDetails {
@@ -19,7 +20,7 @@
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: end;
+  align-items: start;
   padding: 5px 20px 5px 0px;
   gap: 7px;
 }
@@ -32,7 +33,7 @@
 }
 
 .titleProdId {
-  text-align: end;
+  text-align: start;
 }
 .titleProdId span {
   font-size: 24px !important;
@@ -41,21 +42,22 @@
 }
 
 .priceProdId span,
-.categoryProdId span {
+.categoryProdId span,
+.descriptionProdId span {
   font-weight: 600;
   font-size: 17px;
   text-transform: capitalize;
 }
 
 .descriptionProdId {
-  text-align: end;
+  text-align: start;
 }
 
 .boxImageProd {
   width: 50%;
   height: 100%;
   display: flex;
-  justify-content: start;
+  justify-content: end;
   align-items: center;
   padding-left: 20px;
 }
@@ -68,7 +70,7 @@
   width: 100% !important;
   display: flex;
   padding: 20px 0px;
-  justify-content: end;
+  justify-content: start;
 }
 
 @media screen and (min-width: 900px) and (max-width: 1280px) {

@@ -6,6 +6,7 @@ import { useCategory } from '../../Context/categoryContext';
 import { useSelector } from 'react-redux';
 import { useCart } from '../../Context/cartContext';
 import { productsInCart } from '../../Utils/productsInCart';
+import { useProductsContext } from '../../Context/productsContext';
 
 export const Products = () => {
   const { cart, setCart } = useCart();
@@ -15,7 +16,7 @@ export const Products = () => {
   const handleSelectCat = (cat) => {
     setSelectedCategory(cat);
   };
-  const products = useSelector((state) => state.products.products);
+  const { productsContext } = useProductsContext();
   const handleAddToCart = (prod) => {
     const prodInCart = productsInCart(cart, prod?.id);
     if (prodInCart) {
@@ -36,18 +37,29 @@ export const Products = () => {
       </div>
 
       <div className="flex flex-wrap items-center justify-center w-full gap-5">
-        {products
-          .filter((e) => e.category === selectedCategory)
-          .map((p, i) => (
-            <CardProducts
-              key={i}
-              image={p.image}
-              title={p.title}
-              price={p.price}
-              id={p.id}
-              handle={handleAddToCart}
-            />
-          ))}
+        {selectedCategory
+          ? productsContext
+              .filter((e) => e.category === selectedCategory)
+              .map((p, i) => (
+                <CardProducts
+                  key={i}
+                  image={p.image}
+                  title={p.title}
+                  price={p.price}
+                  id={p.id}
+                  handle={handleAddToCart}
+                />
+              ))
+          : productsContext.map((p, i) => (
+              <CardProducts
+                key={i}
+                image={p.image}
+                title={p.title}
+                price={p.price}
+                id={p.id}
+                handle={handleAddToCart}
+              />
+            ))}
       </div>
     </div>
   );
