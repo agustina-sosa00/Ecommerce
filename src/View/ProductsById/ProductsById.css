@@ -164,7 +164,7 @@
 @media screen and (max-width: 500px) {
   .container-productById {
     height: auto;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   .detailsPod {
     width: 100%;
