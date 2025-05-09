@@ -1,31 +1,215 @@
 .contain-carousel {
   width: 100%;
-  height: 100vh;
-  background-color: var(--color-yellowPrimary);
+  height: 90vh;
+  background-color: #f2f0ed;
+  position: relative;
+  padding: 1rem !important;
 }
 
 .contain-slider-prod {
   width: 100%;
   height: 100%;
   display: flex !important;
+  flex-direction: column;
+}
+.containInfo-carousel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .contain-image-carousel {
   width: 50%;
   height: 100%;
   display: flex;
   justify-content: end;
-  padding-right: 30px;
+  padding-right: 40px;
   align-items: center;
 }
 
 .image-prod-carousel {
-  width: 50%;
+  width: 60%;
+  max-height: 80%;
+  filter: drop-shadow(15px 15px 10px rgba(0, 0, 0, 0.623));
 }
 .info-prod-carousel {
   width: 50%;
   height: 100%;
 }
-.titleProd-carousel {
+.containTitle-carousel {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-carousel {
   font-family: 'Luckiest Guy', cursive;
-  font-size: 40px;
+  font-size: 3rem;
+  text-align: center;
+  position: relative;
+  top: 2rem;
+  color: var(--color-yellowPrimary);
+}
+
+.containDetail-carousel {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  align-items: start;
+  gap: 1rem !important;
+}
+
+.titleProd-carousel {
+  font-size: 1.5rem;
+  width: 50%;
+  font-weight: 500;
+  color: black;
+}
+
+.image-gral-carousel {
+  position: absolute;
+  bottom: 10px;
+  width: 300px;
+  height: 300px;
+  right: 20px;
+  filter: drop-shadow(15px 5px 10px rgba(0, 0, 0, 0.623));
+}
+
+.priceProd-carousel {
+  font-size: 1rem;
+  color: #2c444e;
+  font-family: var(--font-text);
+}
+
+/* .priceProd-carousel span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+} */
+
+/* B U T T O N  */
+
+.buttonCarousel {
+  color: #fff !important;
+  border: none;
+  padding: 0.3rem 3rem !important;
+  font-family: 'Karla', sans-serif !important;
+  font-size: 13px !important;
+  letter-spacing: 2px !important;
+  background-color: #2c444e !important;
+  border: 1px solid #2c444e !important;
+}
+
+.buttonCarousel:hover {
+  color: white !important;
+  /* border: 1px solid black; */
+  transition: all 0.3s ease-in-out;
+  background-color: #2c444edc !important;
+  box-shadow: 3px 3px 5px rgb(82, 80, 80);
+}
+
+@media screen and (min-width: 900px) and (max-width: 1280px) {
+}
+
+@media screen and (min-width: 500px) and (max-width: 900px) {
+  .contain-carousel {
+    height: auto;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
+  .contain-slider-prod {
+    justify-content: center;
+  }
+  .containInfo-carousel {
+    flex-direction: column;
+  }
+  .contain-image-carousel {
+    justify-content: center;
+    padding-right: 0;
+    width: 100%;
+  }
+  .image-prod-carousel {
+    width: 30%;
+  }
+  .containDetail-carousel {
+    justify-content: start;
+    align-items: center;
+
+    width: 100%;
+  }
+  .titleProd-carousel {
+    font-family: var(--font-text);
+    text-align: center;
+    font-size: 25px;
+    width: 50%;
+    padding-top: 5px;
+    /* padding-bottom: 5px; */
+  }
+  .image-gral-carousel {
+    width: 250px;
+    height: 250px;
+  }
+  .priceProd-carousel {
+    font-size: 20px;
+  }
+
+  .buttonCarousel {
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contain-slider-prod {
+    justify-content: center;
+  }
+  .containInfo-carousel {
+    flex-direction: column;
+  }
+  .contain-image-carousel {
+    justify-content: center;
+    padding-right: 0;
+    width: 100%;
+    height: 50%;
+  }
+  .image-prod-carousel {
+    height: 80% !important;
+  }
+
+  .containDetail-carousel {
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    bottom: 1rem;
+  }
+  .title-carousel {
+    font-size: 3rem;
+    text-align: center;
+    position: relative;
+    top: 1.5rem;
+  }
+  .titleProd-carousel {
+    font-family: var(--font-text);
+    text-align: center;
+    font-size: 20px;
+    width: 90%;
+    padding-top: 5px;
+    /* padding-bottom: 5px; */
+  }
+  .image-gral-carousel {
+    width: 200px;
+    height: 200px;
+  }
+
+  .priceProd-carousel {
+    font-size: 1.5rem;
+  }
+  .priceProd-carousel span {
+    font-size: 1.2rem;
+  }
 }
