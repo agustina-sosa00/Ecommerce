@@ -4,6 +4,7 @@
 
 @theme {
   --font-text: 'Karla', sans-serif;
+  --font-title: 'Luckiest Guy', cursive;
   --color-yellowPrimary: #ffc803;
 }
 
@@ -30,9 +31,9 @@ body {
 .btn-12 {
   -webkit-tap-highlight-color: transparent;
   appearance: button;
-  background-color: #000;
+  background-color: #eebb04;
   background-image: none;
-  color: #fff;
+  color: #242424;
   cursor: pointer;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
@@ -74,13 +75,13 @@ body {
 }
 
 .btn-12:hover span {
-  color: black;
+  color: #eebb04;
   z-index: 2;
 }
 
 .btn-12:after,
 .btn-12:before {
-  background: #eebb04;
+  background: #242424;
   content: '';
   inset: 0;
   position: absolute;
@@ -94,11 +95,11 @@ body {
     90deg,
     transparent 0,
     transparent 25%,
-    #fff 0,
-    #fff 50%,
+    #242424 0,
+    #242424 50%,
     transparent 0,
     transparent 75%,
-    #fff 0
+    #242424 0
   );
   z-index: -1;
   color: black;
@@ -117,7 +118,7 @@ body {
 }
 
 .buttonCardPrimary {
-  color: rgb(53, 53, 53) !important;
+  color: #242424 !important;
   border: none;
   font-family: 'Karla', sans-serif !important;
   font-size: 13px !important;
@@ -145,8 +146,8 @@ body {
 }
 
 .buttonNavbar:hover {
-  color: rgb(247, 247, 78) !important;
-  border: 1px solid rgb(247, 247, 78);
+  color: #ffc803 !important;
+  background-color: transparent;
   transition: all 0.3s ease-in-out;
 }
 

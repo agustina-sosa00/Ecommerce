@@ -8,7 +8,7 @@ import { useCategory } from '../../Context/categoryContext';
 import { useCart } from '../../Context/cartContext';
 import { productsInCart } from '../../Utils/productsInCart';
 
-export const Categories = ({ products }) => {
+export const Categories = ({ products, state }) => {
   const { cart, setCart } = useCart();
   const { setSelectedCategory } = useCategory();
   const dispatch = useDispatch();
@@ -33,6 +33,14 @@ export const Categories = ({ products }) => {
       setCart([...cart, newProd]);
     }
   };
+  useEffect(() => {
+    if (categories && products) {
+      const filtered = categories.map((c) =>
+        products?.filter((e) => e.category === c).slice(1, 2)
+      );
+      state(filtered);
+    }
+  }, [categories, products]);
   return (
     <div id="categories" className="categoriesContainer">
       <h1 className="title">Categories</h1>
@@ -41,7 +49,6 @@ export const Categories = ({ products }) => {
         const filterProducts = products
           ?.filter((e) => e.category === c)
           .slice(0, 3);
-
         return (
           <BoxCategoriesProd
             key={i}
