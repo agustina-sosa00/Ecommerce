@@ -1,5 +1,31 @@
 .contain-carousel {
   width: 100%;
   height: 100vh;
-  background-color: red;
+  background-color: var(--color-yellowPrimary);
+}
+
+.contain-slider-prod {
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+}
+.contain-image-carousel {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  padding-right: 30px;
+  align-items: center;
+}
+
+.image-prod-carousel {
+  width: 50%;
+}
+.info-prod-carousel {
+  width: 50%;
+  height: 100%;
+}
+.titleProd-carousel {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 40px;
 }
