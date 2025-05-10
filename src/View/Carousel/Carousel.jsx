@@ -10,7 +10,6 @@ import { formatPrice } from '../../Utils/formatPrice';
 export const Carousel = () => {
   const prodByCat = useSelector((state) => state.products.productsByCat);
   const [prodArray, setProdArray] = useState(prodByCat);
-  console.log('prodArray', prodArray);
   useEffect(() => {
     if (prodByCat) {
       const newProdArray = prodByCat.map((item) => {
