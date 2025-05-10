@@ -9,6 +9,7 @@ import {
 } from '../../Redux/Store/productsSlice';
 import { useProductsContext } from '../../Context/productsContext';
 import { Carousel } from '../Carousel/Carousel';
+import { Contact } from '../Contact/Contact';
 
 export const Home = () => {
   const { data } = useGetProductsQuery();
@@ -34,6 +35,7 @@ export const Home = () => {
             products={productsContext && productsContext}
             state={setProductsByCat}
           />
+          <Contact />
         </>
       ) : (
         <div className="flex items-center justify-center w-full h-screen font-text">
