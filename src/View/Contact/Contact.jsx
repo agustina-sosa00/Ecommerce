@@ -45,7 +45,7 @@ export const Contact = () => {
       <div className="container-form ">
         <div className="form-contact">
           <h2 className="title-form-contact">Contact</h2>
-          {/* <p className="mb-5 leading-relaxed text-gray-600"></p> */}
+          <p className="mb-5 leading-relaxed text-gray-600">Send email</p>
           <div className="box-input-form-contact">
             <label htmlFor="email" className="label-form-contact">
               Email

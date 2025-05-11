@@ -6,13 +6,14 @@ import { useParams } from 'react-router-dom';
 import { useProductsContext } from '../../Context/productsContext';
 import { useCart } from '../../Context/cartContext';
 import { productsInCart } from '../../Utils/productsInCart';
-
+// import { modalAlert } from '../../Utils/modalAlert';
 export const ProductsById = () => {
   const { id } = useParams();
   const { productsContext } = useProductsContext();
   const product = productsContext?.find((p) => p.id === Number(id));
   const { cart, setCart } = useCart();
   const handleAddToCart = () => {
+    // modalAlert(text={'¿Desea agregar el producto al carrito?'});
     const prodInCart = productsInCart(cart, product?.id);
     if (prodInCart) {
       return;
