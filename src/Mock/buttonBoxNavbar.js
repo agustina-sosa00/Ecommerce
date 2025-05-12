@@ -20,7 +20,7 @@ export const buttonBoxNavbar = [
   {
     id: 4,
     name: 'contact',
-    url: '#contact',
-    type: 'route',
+    url: 'contact',
+    type: 'scroll',
   },
 ];

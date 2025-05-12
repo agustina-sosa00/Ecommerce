@@ -30,7 +30,7 @@ export const Contact = () => {
   };
 
   return (
-    <section className="section-contact">
+    <section id="contact" className="section-contact">
       <div className="container-map-contact ">
         <iframe
           className="map-contact"
