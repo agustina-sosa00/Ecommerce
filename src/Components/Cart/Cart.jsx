@@ -28,6 +28,7 @@ export const Cart = () => {
       isOpen={open}
       handle={handleOnClick}
       icon={<PiShoppingCartFill />}
+      quantityCart={cart.length}
     >
       <div className="cartContain ">
         <div className="headerCart ">
