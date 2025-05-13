@@ -16,6 +16,9 @@ export const modalAlert = ({
       showCancelButton: cancelButton,
       confirmButtonColor: '#38b000',
       cancelButtonColor: '#d62828',
+      customClass: {
+        modal: 'modalAlert',
+      },
     });
   } else {
     return Swal.fire({

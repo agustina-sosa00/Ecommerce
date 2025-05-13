@@ -219,6 +219,10 @@ body {
   font-size: 13px;
 }
 
+/* M O D A L  A L E R T */
+.modalAlert {
+  z-index: 50 !important;
+}
 /* M E D I A  Q U E R Y */
 
 @media screen and (min-width: 500px) and (max-width: 900px) {

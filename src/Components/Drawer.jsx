@@ -19,7 +19,12 @@ export const DrawerRight = ({
         <div className="countCart">{quantityCart}</div>
       </div>
 
-      <Drawer open={isOpen} onClose={handle} anchor="right">
+      <Drawer
+        open={isOpen}
+        onClose={handle}
+        anchor="right"
+        className="modalDrawer"
+      >
         {children}
       </Drawer>
     </div>

@@ -9,6 +9,7 @@ import { useCart } from '../../Context/cartContext.jsx';
 import { ListProductsCart } from './ListProductsCart.jsx';
 import { CustomButton } from '../CustomButton.jsx';
 import { formatPrice } from '../../Utils/formatPrice.js';
+import { modalAlert } from '../../Utils/modalAlert.js';
 
 export const Cart = () => {
   const [open, setOpen] = useState(false);
@@ -18,9 +19,18 @@ export const Cart = () => {
   };
   const { cart, setCart } = useCart();
 
-  const handleDeleteProd = (id) => {
-    const productDelete = cart.filter((p) => p.id !== id);
-    setCart(productDelete);
+  const handleDeleteProd = async (id) => {
+    const result = await modalAlert({
+      icon: 'info',
+      textButton: 'Aceptar',
+      cancelButton: true,
+      cancelText: 'Cancelar',
+      text: '¿Desea eliminar este producto del carrito?',
+    });
+    if (result.isConfirmed) {
+      const productDelete = cart.filter((p) => p.id !== id);
+      setCart(productDelete);
+    }
   };
 
   return (
