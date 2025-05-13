@@ -36,6 +36,7 @@
 .title-categories {
   color: #385a64;
   font-size: 30px;
+  text-transform: capitalize;
 }
 
 .boxCardProd {
