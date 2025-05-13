@@ -2,7 +2,7 @@ import React from 'react';
 import { CardProducts } from '../Products/CardProducts';
 import { CardSeeMore } from './CardSeeMore';
 import { productsInCart } from '../../Utils/productsInCart';
-
+import './Categories.css';
 export const BoxCategoriesProd = ({
   titleCat,
   products,
