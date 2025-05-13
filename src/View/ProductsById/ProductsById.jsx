@@ -21,7 +21,6 @@ export const ProductsById = () => {
       setCart([...cart, product]);
     }
   };
-  console.log('cart', cart);
   return (
     <div className="container-productById">
       <ImageProd image={product?.image} />

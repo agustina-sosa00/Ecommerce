@@ -6,17 +6,13 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { useCart } from '../../Context/cartContext';
 import './viewCart.css';
 import { cutTitle } from '../../Utils/cutTitle';
 import { Count } from './Count';
 import { formatPrice } from '../../Utils/formatPrice';
-import { Divider, TableFooter } from '@mui/material';
+import { TableFooter } from '@mui/material';
 
-export const TableCart = () => {
-  const { cart } = useCart();
-  const { total } = useCart();
-  console.log('cartttttt', cart);
+export const TableCart = ({ cart, total }) => {
   const headerTitles = ['Products', 'Quantity', 'Unit Price', 'Total Price'];
   return (
     <TableContainer component={Paper} className="container-tableCart">
