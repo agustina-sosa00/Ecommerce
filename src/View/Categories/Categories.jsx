@@ -56,6 +56,7 @@ export const Categories = ({ products, state }) => {
             products={filterProducts}
             handle={() => handleViewMore(c)}
             handleAdd={handleAddToCart}
+            cart={cart}
           />
         );
       })}

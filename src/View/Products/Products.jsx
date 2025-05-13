@@ -11,18 +11,22 @@ import { useProductsContext } from '../../Context/productsContext';
 export const Products = () => {
   const { cart, setCart } = useCart();
   const { selectedCategory, setSelectedCategory } = useCategory();
+
   const categories = useSelector((state) => state.categories.categories);
 
   const handleSelectCat = (cat) => {
     setSelectedCategory(cat);
   };
   const { productsContext } = useProductsContext();
-  const handleAddToCart = (prod) => {
-    const prodInCart = productsInCart(cart, prod?.id);
+
+  const handleAddToCart = async (prod) => {
+    const newProd = { ...prod, quantity: 1 };
+    const prodInCart = productsInCart(cart, newProd?.id);
+
     if (prodInCart) {
       return;
     } else {
-      setCart([...cart, prod]);
+      setCart([...cart, newProd]);
     }
   };
   return (
@@ -36,7 +40,7 @@ export const Products = () => {
         />
       </div>
 
-      <div className="flex flex-wrap items-center justify-center w-full gap-5">
+      <div className="flex flex-wrap items-center justify-center w-full gap-5 py-10">
         {selectedCategory
           ? productsContext
               .filter((e) => e.category === selectedCategory)
@@ -48,6 +52,7 @@ export const Products = () => {
                   price={p.price}
                   id={p.id}
                   handle={handleAddToCart}
+                  prodInCart={productsInCart(cart, p.id)}
                 />
               ))
           : productsContext.map((p, i) => (
@@ -58,6 +63,7 @@ export const Products = () => {
                 price={p.price}
                 id={p.id}
                 handle={handleAddToCart}
+                prodInCart={productsInCart(cart, p.id)}
               />
             ))}
       </div>

@@ -17,7 +17,9 @@ export const CustomButton = ({
         <Link to={link}>
           <Button
             className={
-              classButton & (color === 'primary')
+              classButton & (color === 'disabledButton')
+                ? 'buttonCardDisabled'
+                : classButton & (color === 'primary')
                 ? 'buttonCardPrimary'
                 : classButton & (color === 'secondary')
                 ? 'buttonCardSecondary'
@@ -25,6 +27,7 @@ export const CustomButton = ({
             }
             variant="text"
             onClick={onClickButton}
+            disabled={color === 'disabledButton'}
           >
             {text}
           </Button>
@@ -32,7 +35,9 @@ export const CustomButton = ({
       ) : (
         <Button
           className={
-            classButton & (color === 'primary')
+            classButton & (color === 'disabledButton')
+              ? 'buttonCardDisabled'
+              : classButton & (color === 'primary')
               ? 'buttonCardPrimary'
               : classButton & (color === 'secondary')
               ? 'buttonCardSecondary'

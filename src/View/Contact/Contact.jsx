@@ -12,7 +12,6 @@ export const Contact = () => {
     message: '',
   });
 
-  console.log('error', error);
   const handleOnChange = (e) => {
     const { name, value } = e.target;
     const errors = formValidate(form);

@@ -7,7 +7,6 @@ import { useCart } from '../../Context/cartContext';
 export const Count = (product) => {
   const { cart, setCart } = useCart();
   const [count, setCount] = useState(product?.product.quantity);
-  console.log('product', product);
   const handleCalculateQuantity = (icon) => {
     const productId = cart.find((item) => item.id === product.product.id);
     if (productId) {

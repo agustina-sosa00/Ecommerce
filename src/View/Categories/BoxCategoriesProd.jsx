@@ -1,12 +1,14 @@
 import React from 'react';
 import { CardProducts } from '../Products/CardProducts';
 import { CardSeeMore } from './CardSeeMore';
+import { productsInCart } from '../../Utils/productsInCart';
 
 export const BoxCategoriesProd = ({
   titleCat,
   products,
   handle,
   handleAdd,
+  cart,
 }) => {
   return (
     <div className="box-categories">
@@ -22,6 +24,7 @@ export const BoxCategoriesProd = ({
               price={p.price}
               id={p.id}
               handle={handleAdd}
+              prodInCart={productsInCart(cart, p.id)}
             />
           ))}
 
