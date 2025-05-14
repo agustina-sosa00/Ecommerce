@@ -48,7 +48,7 @@ export const Categories = ({ products, state }) => {
         {categories?.map((c, i) => {
           const filterProducts = products
             ?.filter((e) => e.category === c)
-            .slice(0, 3);
+            .slice(0, 2);
           return (
             <BoxCategoriesProd
               key={i}
