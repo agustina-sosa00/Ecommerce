@@ -21,6 +21,6 @@
 
 @media screen and (max-width: 500px) {
   .heroContainer {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 }

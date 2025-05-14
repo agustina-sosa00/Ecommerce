@@ -6,8 +6,8 @@ import './Hero.css';
 export const Hero = () => {
   return (
     <div id="hero" className="heroContainer">
-      <BoxHero />
       <ImgHero />
+      <BoxHero />
     </div>
   );
 };
