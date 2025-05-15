@@ -35,9 +35,10 @@ export const Cart = () => {
 
   return (
     <DrawerRight
+      className="containericondrawer"
       isOpen={open}
       handle={handleOnClick}
-      icon={<PiShoppingCartFill />}
+      icon={<PiShoppingCartFill className="icon-cart" />}
       quantityCart={cart.length}
     >
       <div className="cartContain ">

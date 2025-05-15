@@ -1,6 +1,6 @@
 .contain-viewCart {
   width: 100% !important;
-  height: 100vh;
+  min-height: 100vh;
   padding: 30px 50px;
 }
 
@@ -65,6 +65,30 @@
   background-color: rgb(235, 235, 235);
 }
 
+/* BUTTON WhatsApp */
+.buttonWhatsapp {
+  background-color: #0ec143;
+  padding: 0.5rem 0.7rem;
+  color: white;
+  border-radius: 0.7rem;
+  font-family: var(--font-text);
+  font-weight: 500;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  margin-top: 1rem;
+}
+
+.buttonWhatsapp:hover {
+  background-color: #0fac3e;
+  cursor: pointer;
+}
+
+.cartMovile {
+  display: none;
+}
+
 @media screen and (min-width: 900px) and (max-width: 1280px) {
 }
 
@@ -77,5 +101,53 @@
   }
   .container-tableCart {
     display: none;
+  }
+  .cartMovile {
+    display: block;
+    width: 100%;
+    border: 1px solid #dad9d9;
+    padding: 1rem;
+    border-radius: 0.7rem;
+    justify-content: center !important;
+  }
+  .ProdCartMovile {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid #dad9d9;
+    padding: 0.5rem 0;
+    gap: 1rem;
+  }
+  .titleProdCartMovile {
+    font-family: var(--font-text);
+    font-weight: 600;
+    color: #242424;
+  }
+
+  .titleProdCartMovile span {
+    font-family: var(--font-text);
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+  .priceCartMovile {
+    color: #4b4a4a;
+  }
+
+  .priceCartMovile {
+    color: black;
+  }
+
+  .totalCartMovile {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .box-totalCart {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
   }
 }
