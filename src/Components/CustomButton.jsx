@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 export const CustomButton = ({
   text,
   onClickButton,
-  classButton,
+
   color,
   link,
 }) => {
@@ -17,14 +17,17 @@ export const CustomButton = ({
         <Link to={link}>
           <Button
             className={
-              classButton & (color === 'primary')
+              color === 'disabledButton'
+                ? 'buttonCardDisabled'
+                : color === 'primary'
                 ? 'buttonCardPrimary'
-                : classButton & (color === 'secondary')
+                : color === 'secondary'
                 ? 'buttonCardSecondary'
                 : 'buttonNavbar'
             }
             variant="text"
             onClick={onClickButton}
+            disabled={color === 'disabledButton'}
           >
             {text}
           </Button>
@@ -32,9 +35,11 @@ export const CustomButton = ({
       ) : (
         <Button
           className={
-            classButton & (color === 'primary')
+            color === 'disabledButton'
+              ? 'buttonCardDisabled'
+              : color === 'primary'
               ? 'buttonCardPrimary'
-              : classButton & (color === 'secondary')
+              : color === 'secondary'
               ? 'buttonCardSecondary'
               : 'buttonNavbar'
           }

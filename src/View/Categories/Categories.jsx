@@ -44,21 +44,23 @@ export const Categories = ({ products, state }) => {
   return (
     <div id="categories" className="categoriesContainer">
       <h1 className="title">Categories</h1>
-
-      {categories?.map((c, i) => {
-        const filterProducts = products
-          ?.filter((e) => e.category === c)
-          .slice(0, 3);
-        return (
-          <BoxCategoriesProd
-            key={i}
-            titleCat={c}
-            products={filterProducts}
-            handle={() => handleViewMore(c)}
-            handleAdd={handleAddToCart}
-          />
-        );
-      })}
+      <div>
+        {categories?.map((c, i) => {
+          const filterProducts = products
+            ?.filter((e) => e.category === c)
+            .slice(0, 2);
+          return (
+            <BoxCategoriesProd
+              key={i}
+              titleCat={c}
+              products={filterProducts}
+              handle={() => handleViewMore(c)}
+              handleAdd={handleAddToCart}
+              cart={cart}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };

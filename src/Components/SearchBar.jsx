@@ -29,7 +29,7 @@ export const SearchBar = () => {
       <div className="flex items-center justify-center w-full h-8 ">
         <input
           placeholder="Search..."
-          className="w-full h-8 px-5 py-1 font-bold text-black transition-all border-t-2 border-b-2 border-l-2 border-black rounded-r-none shadow-lg outline-none md:font-normal md:border-b md:border-l md:border-t md:border-white md:text-white border-r-none lg:w-1/2 input rounded-l-xl focus:w-64"
+          className="w-full h-8 px-5 py-1 font-bold text-black transition-all border-t-2 border-b-2 border-l-2 border-black rounded-r-none shadow-lg outline-none md:font-normal md:border-b md:border-l md:border-t md:border-white md:text-white border-r-none lg:w-1/2 input rounded-l-xl "
           name="search"
           type="search"
           onChange={handleOnChange}

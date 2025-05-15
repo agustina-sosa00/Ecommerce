@@ -12,7 +12,6 @@ export const Contact = () => {
     message: '',
   });
 
-  console.log('error', error);
   const handleOnChange = (e) => {
     const { name, value } = e.target;
     const errors = formValidate(form);
@@ -30,7 +29,7 @@ export const Contact = () => {
   };
 
   return (
-    <section className="section-contact">
+    <section id="contact" className="section-contact">
       <div className="container-map-contact ">
         <iframe
           className="map-contact"
@@ -45,7 +44,7 @@ export const Contact = () => {
       <div className="container-form ">
         <div className="form-contact">
           <h2 className="title-form-contact">Contact</h2>
-          {/* <p className="mb-5 leading-relaxed text-gray-600"></p> */}
+          <p className="mb-5 leading-relaxed text-gray-600">Send email</p>
           <div className="box-input-form-contact">
             <label htmlFor="email" className="label-form-contact">
               Email
