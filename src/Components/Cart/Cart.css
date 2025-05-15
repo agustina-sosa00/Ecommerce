@@ -122,13 +122,21 @@
   position: absolute;
   top: 0;
   right: 10px;
-  background-color: white;
+  background-color: var(--color-yellowPrimary);
   color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 0.75rem;
   line-height: 15px;
+}
+
+.icon-cart {
+  color: var(--color-yellowPrimary);
+}
+
+.drawerCart:hover {
+  background-color: none !important;
 }
 
 @media screen and (min-width: 900px) and (max-width: 1280px) {
