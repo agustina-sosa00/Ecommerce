@@ -44,26 +44,36 @@ export const Cart = () => {
       <div className="cartContain ">
         <div className="headerCart ">
           <h1 className="titleHeaderCart">Mi Carrito</h1>
-          <button onClick={handleOnClick}>
+          <button onClick={handleOnClick} className="cursor-pointer">
             <IoMdClose />
           </button>
         </div>
         <Divide classWidth="divideFull" />
-        <ListProductsCart products={cart} handleDelete={handleDeleteProd} />
-        <div className="constain-infoCart">
-          <p className="totalPrice-text">
-            <span>total: </span>
-            {formatPrice(total)}
-          </p>
+        {cart.length > 0 ? (
+          <>
+            <ListProductsCart products={cart} handleDelete={handleDeleteProd} />
+            <div className="constain-infoCart">
+              <p className="totalPrice-text">
+                <span>total: </span>
+                {formatPrice(total)}
+              </p>
 
-          <CustomButton
-            classButton={true}
-            color="primary"
-            text={'Ver compra'}
-            link={'/cart'}
-            onClickButton={handleOnClick}
-          />
-        </div>
+              <CustomButton
+                classButton={true}
+                color="primary"
+                text={'Ver compra'}
+                link={'/cart'}
+                onClickButton={handleOnClick}
+              />
+            </div>
+          </>
+        ) : (
+          <div className="flex items-start justify-center w-full h-screen text-gray-600 font-text">
+            <p className="w-3/4 mt-20 text-center">
+              Aún no hay productos en el carrito.
+            </p>
+          </div>
+        )}
       </div>
     </DrawerRight>
   );
