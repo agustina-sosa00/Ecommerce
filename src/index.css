@@ -179,7 +179,7 @@ body {
 /* S E A R C H  B A R */
 
 .container-suggestion-SearBar {
-  width: 420px;
+  width: 280px;
   height: 300px;
   position: absolute;
   top: 33px;
@@ -325,6 +325,7 @@ body {
     color: white !important;
     border: none;
     font-family: 'Karla', sans-serif !important;
+    font-size: 1rem !important;
   }
 
   .buttonCardPrimary {
