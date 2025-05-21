@@ -42,7 +42,7 @@ export const HamburgerMenu = () => {
         <GiHamburgerMenu className="!text-3xl text-white" />
       </button>
       {open && (
-        <div className="absolute right-0 z-10 flex flex-col items-end w-2/3 px-5 py-5 top-20 bg-black/70 lg:hidden">
+        <div className="absolute right-0 !z-50 flex flex-col items-end w-2/3 px-5 py-5 top-14 bg-black/70 lg:hidden">
           {buttonBoxNavbar.map((e) =>
             e.type === 'scroll' ? (
               <ScrollLink

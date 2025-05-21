@@ -29,14 +29,14 @@ export const SearchBar = () => {
       <div className="flex items-center justify-center w-full h-8 ">
         <input
           placeholder="Search..."
-          className="w-full h-8 px-5 py-1 font-bold text-black transition-all border-t-2 border-b-2 border-l-2 border-black rounded-r-none shadow-lg outline-none md:font-normal md:border-b md:border-l md:border-t md:border-white md:text-white border-r-none lg:w-1/2 input rounded-l-xl "
+          className="w-full h-8 px-5 py-1 font-bold text-black transition-all border-t-2 border-b-2 border-l-2 border-black rounded-r-none shadow-lg outline-none md:font-normal md:border-b md:border-l md:border-t md:border-white md:text-white border-r-none lg:w-1/2 input rounded-l-xl 2xl:text-[1.5rem]"
           name="search"
           type="search"
           onChange={handleOnChange}
           autocomplete="off"
         />
         <button className="h-8 px-2 py-1 transition-all border-t-2 border-b-2 border-r-2 border-black rounded-l-none shadow-lg outline-none md:border-t md:border-b md:border-r md:border-white focus:border-b-2 focus:border-r-2 input focus:border-t-2 rounded-r-xl">
-          <CiSearch className="text-xl !font-bold text-black md:font-normal md:text-white " />
+          <CiSearch className="text-xl !font-bold text-black md:font-normal md:text-white  2xl:text-[1.5rem]" />
         </button>
       </div>
       {writing && (

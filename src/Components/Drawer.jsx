@@ -14,7 +14,7 @@ export const DrawerRight = ({
     <div>
       <div className="drawerCart">
         <Button onClick={handle} className="buttonDrawer">
-          {icon}
+          <div className="flex items-center justify-center h-full">{icon}</div>
         </Button>
         <div className="countCart">{quantityCart}</div>
       </div>
