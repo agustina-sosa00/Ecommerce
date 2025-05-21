@@ -7,7 +7,7 @@
   top: 0;
   position: sticky;
   z-index: 30;
-  height: 80px;
+  height: 90px !important;
   width: 100% !important;
   padding: 16px;
 }
@@ -22,7 +22,38 @@
 .subNavbar {
   display: none;
 }
-@media screen and (min-width: 500px) and (max-width: 900px) {
+
+@media screen and (min-width: 1401px) {
+  .navbarContain {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 16px;
+    background-color: #242424;
+    top: 0;
+    position: sticky;
+    z-index: 30;
+    height: 80px;
+    width: 100% !important;
+    padding: 16px;
+  }
+  .containCartandHamb {
+    display: flex;
+    /* gap: 5px; */
+  }
+  .contain-searchBar-lg {
+    display: flex;
+    width: 33%;
+  }
+  .subNavbar {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1024px) {
+}
+
+@media screen and (min-width: 501px) and (max-width: 900px) {
   .navbarContain {
     justify-content: space-between;
   }
