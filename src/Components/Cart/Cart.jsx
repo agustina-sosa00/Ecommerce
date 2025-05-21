@@ -44,7 +44,7 @@ export const Cart = () => {
       <div className="cartContain ">
         <div className="headerCart ">
           <h1 className="titleHeaderCart">Mi Carrito</h1>
-          <button onClick={handleOnClick} className="cursor-pointer">
+          <button onClick={handleOnClick} className="close-button-cart">
             <IoMdClose />
           </button>
         </div>
