@@ -1,148 +1,303 @@
-.buttonDrawer {
-  color: white !important;
-  height: 40px !important;
-  font-size: 30px !important;
-}
-.drawerCart {
-  position: relative !important;
+@media screen and (min-width: 1401px) {
+  .buttonDrawer {
+    color: white !important;
+    height: 40px !important;
+    font-size: 50px !important;
+  }
+  .drawerCart {
+    position: relative !important;
+  }
+
+  .modalDrawer {
+    z-index: 40 !important;
+  }
+
+  .cartContain {
+    width: 450px !important;
+    height: 100%;
+    padding: 10px 0px;
+    gap: 5px !important;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .headerCart {
+    width: 100% !important;
+    height: 50px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .titleHeaderCart {
+    font-family: var(--font-title);
+    color: black;
+    font-size: 1.7rem;
+  }
+
+  .close-button-cart {
+    font-size: 1.7rem !important;
+  }
+  .close-button-cart:hover {
+    cursor: pointer;
+  }
+
+  .listProducts {
+    width: 100% !important;
+    gap: 10px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .itemCart {
+    width: 100% !important;
+    height: 100px !important;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+  }
+
+  .imgCartProd {
+    width: 20% !important;
+    height: 100% !important;
+  }
+
+  .infoProdCart {
+    width: 65% !important;
+    display: flex;
+    height: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 0px 5px;
+  }
+  .titleProdCart {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+  }
+  .priceProdCart {
+    font-family: var(--font-title);
+    font-weight: 500;
+    font-size: 1.3rem !important;
+  }
+
+  .deleteProdCart {
+    width: 15% !important;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .iconDeleteCart:hover {
+    cursor: pointer;
+  }
+
+  .iconDeleteCart {
+    font-size: 2rem !important;
+    color: rgb(211, 0, 0);
+  }
+
+  .dividerMaterial {
+    width: 100% !important;
+  }
+
+  .constain-infoCart {
+    width: 100% !important;
+    display: flex;
+    padding: 25px 35px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .totalPrice-text {
+    font-family: var(--font-text);
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem !important;
+  }
+  .totalPrice-text span {
+    font-weight: 600;
+  }
+  .constain-infoCart button {
+    width: 100% !important;
+    font-size: 1.5rem !important;
+  }
+
+  .countCart {
+    width: 30px;
+    height: 30px;
+    border-radius: 180px;
+    position: absolute;
+    top: -15px !important;
+    right: 0px;
+    background-color: var(--color-yellowPrimary);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem !important;
+    line-height: 30px;
+  }
+
+  .icon-cart {
+    color: var(--color-yellowPrimary);
+  }
+
+  .drawerCart:hover {
+    background-color: none !important;
+  }
 }
 
-.modalDrawer {
-  z-index: 40 !important;
+@media screen and (min-width: 1025px) and (max-width: 1400px) {
+  .buttonDrawer {
+    color: white !important;
+    height: 40px !important;
+    font-size: 30px !important;
+  }
+  .drawerCart {
+    position: relative !important;
+  }
+
+  .modalDrawer {
+    z-index: 40 !important;
+  }
+
+  .cartContain {
+    width: 300px !important;
+    height: 100%;
+    padding: 10px 0px;
+    gap: 5px !important;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .headerCart {
+    width: 100% !important;
+    height: 30px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .titleHeaderCart {
+    font-family: var(--font-title);
+    color: black;
+  }
+
+  .titleProdCart {
+    font-family: var(--font-title);
+    font-size: 15px;
+  }
+
+  .listProducts {
+    width: 300px !important;
+    gap: 10px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .itemCart {
+    width: 100% !important;
+    height: 100px !important;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+  }
+
+  .imgCartProd {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .infoProdCart {
+    width: 70% !important;
+    display: flex;
+    height: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 0px 5px;
+  }
+  .priceProdCart {
+    font-family: var(--font-title);
+    font-weight: 500;
+  }
+
+  .deleteProdCart {
+    width: 20% !important;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .iconDeleteCart:hover {
+    cursor: pointer;
+  }
+
+  .iconDeleteCart {
+    font-size: 22px;
+    color: rgb(211, 0, 0);
+  }
+
+  .dividerMaterial {
+    width: 100% !important;
+  }
+
+  .constain-infoCart {
+    width: 100% !important;
+    display: flex;
+    padding: 25px 35px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .totalPrice-text {
+    font-family: var(--font-text);
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+  }
+  .totalPrice-text span {
+    font-weight: 600;
+  }
+  .constain-infoCart button {
+    width: 100% !important;
+  }
+
+  .countCart {
+    width: 15px;
+    height: 15px;
+    border-radius: 180px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    background-color: var(--color-yellowPrimary);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+    line-height: 15px;
+  }
+
+  .icon-cart {
+    color: var(--color-yellowPrimary);
+  }
+
+  .drawerCart:hover {
+    background-color: none !important;
+  }
 }
 
-.cartContain {
-  width: 300px !important;
-  height: 100%;
-  padding: 10px 0px;
-  gap: 5px !important;
-  display: flex;
-  flex-direction: column;
+@media screen and (min-width: 901px) and (max-width: 1024px) {
 }
 
-.headerCart {
-  width: 100% !important;
-  height: 30px;
-  padding: 5px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.titleHeaderCart {
-  font-family: var(--font-title);
-  color: black;
-}
-
-.titleProdCart {
-  font-family: var(--font-title);
-  font-size: 15px;
-}
-
-.listProducts {
-  width: 300px !important;
-  gap: 10px !important;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-}
-
-.itemCart {
-  width: 100% !important;
-  height: 100px !important;
-  display: flex;
-  align-items: center;
-  padding: 5px;
-}
-
-.imgCartProd {
-  width: 60px !important;
-  height: 60px !important;
-}
-
-.infoProdCart {
-  width: 70% !important;
-  display: flex;
-  height: 100px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  padding: 0px 5px;
-}
-.priceProdCart {
-  font-family: var(--font-title);
-  font-weight: 500;
-}
-
-.deleteProdCart {
-  width: 20% !important;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.iconDeleteCart:hover {
-  cursor: pointer;
-}
-
-.iconDeleteCart {
-  font-size: 22px;
-  color: rgb(211, 0, 0);
-}
-
-.dividerMaterial {
-  width: 100% !important;
-}
-
-.constain-infoCart {
-  width: 100% !important;
-  display: flex;
-  padding: 25px 35px;
-  flex-direction: column;
-  gap: 10px;
-}
-.totalPrice-text {
-  font-family: var(--font-text);
-  text-transform: uppercase;
-  width: 100%;
-  text-align: center;
-}
-.totalPrice-text span {
-  font-weight: 600;
-}
-.constain-infoCart button {
-  width: 100% !important;
-}
-
-.countCart {
-  width: 15px;
-  height: 15px;
-  border-radius: 180px;
-  position: absolute;
-  top: 0;
-  right: 10px;
-  background-color: var(--color-yellowPrimary);
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.75rem;
-  line-height: 15px;
-}
-
-.icon-cart {
-  color: var(--color-yellowPrimary);
-}
-
-.drawerCart:hover {
-  background-color: none !important;
-}
-
-@media screen and (min-width: 900px) and (max-width: 1280px) {
-}
-
-@media screen and (min-width: 500px) and (max-width: 900px) {
+@media screen and (min-width: 501px) and (max-width: 900px) {
   .cartContain {
     width: 400px !important;
   }
