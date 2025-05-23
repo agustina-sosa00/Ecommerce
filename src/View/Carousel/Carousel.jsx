@@ -58,7 +58,7 @@ export const Carousel = () => {
                 {item[0].category}
               </p>
 
-              <ButtonCarousel />
+              <ButtonCarousel id={item[0].id} />
             </div>
           </div>
         </SwiperSlide>

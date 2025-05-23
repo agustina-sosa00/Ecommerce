@@ -1,5 +1,10 @@
 import { Button } from '@mui/material';
 import './Carousel.css';
-export const ButtonCarousel = () => {
-  return <Button className="buttonCarousel">details</Button>;
+import { Link } from 'react-router-dom';
+export const ButtonCarousel = ({ id }) => {
+  return (
+    <Link to={`/products/${id}`}>
+      <Button className="buttonCarousel">details</Button>
+    </Link>
+  );
 };
