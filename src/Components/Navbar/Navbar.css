@@ -7,12 +7,12 @@
   top: 0;
   position: sticky;
   z-index: 30;
-  height: 90px !important;
+  height: 80px !important;
   width: 100% !important;
   padding: 16px;
 }
 .containCartandHamb {
-  display: flex !important;
+  display: flex;
   /* gap: 5px; */
 }
 .contain-searchBar-lg {
@@ -21,33 +21,6 @@
 }
 .subNavbar {
   display: none;
-}
-
-@media screen and (min-width: 1401px) {
-  .navbarContain {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 16px;
-    background-color: #242424;
-    top: 0;
-    position: sticky;
-    z-index: 30;
-    height: 80px !important;
-    width: 100% !important;
-    padding: 16px;
-  }
-  .containCartandHamb {
-    display: flex;
-    /* gap: 5px; */
-  }
-  .contain-searchBar-lg {
-    display: flex;
-    width: 33%;
-  }
-  .subNavbar {
-    display: none;
-  }
 }
 
 @media screen and (min-width: 901px) and (max-width: 1024px) {
